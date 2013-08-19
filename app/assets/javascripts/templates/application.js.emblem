@@ -1,0 +1,6 @@
+header.navbar.navbar-fixed-top
+  .container
+    .navbar-header
+      a.navbar-brand Blog
+
+  outlet

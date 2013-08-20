@@ -1,3 +1,3 @@
-EmberBlog.Router.map (match)->
-  # match('/').to('index')
-
+EmberBlog.Router.map (match) ->
+  @resource "dashboard", path: "/"
+  @resource "post", path: "/post/:post_slug"

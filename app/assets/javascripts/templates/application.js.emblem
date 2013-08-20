@@ -1,20 +1,10 @@
 header.navbar.navbar-fixed-top
   .container
     .navbar-header
-      a.navbar-brand Blog
+      = linkTo "dashboard" classNames="navbar-brand" | Blog
 
 .container
   .row
     .col-lg-8.article-body
-      h1
-        | Super awesome title&nbsp;
-        small 19th August 2013
-
-      p This is a blog post.
-
-      ol
-        li This is an li.
-
+      outlet
     .col-lg-4
-
-  outlet

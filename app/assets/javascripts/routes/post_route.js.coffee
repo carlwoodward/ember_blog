@@ -1,1 +1,3 @@
-EmberBlog.PostRoute = Ember.Route.extend()
+EmberBlog.PostRoute = Ember.Route.extend
+  model: ->
+    EmberBlog.Post.find()

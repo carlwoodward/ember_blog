@@ -2,7 +2,5 @@ h1
   | Super awesome title&nbsp;
   small 19th August 2013
 
-p This is a blog post.
-
-ol
-  li This is an li.
+each controller
+  markdown body

@@ -1,7 +1,7 @@
 header.navbar.navbar-fixed-top
   .container
     .navbar-header
-      = linkTo "dashboard" classNames="navbar-brand" | Blog
+      = linkTo "posts" classNames="navbar-brand" | Blog
 
 .container
   .row

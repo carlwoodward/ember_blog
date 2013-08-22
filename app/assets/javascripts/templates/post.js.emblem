@@ -1,5 +1,6 @@
-h1
-  span= title
-  small= publishedOn
+.post-summary
+  h1
+    span= title
+    small= publishedOn
 
-markdown body
+  markdown body

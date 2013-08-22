@@ -1,6 +1,0 @@
-each controller
-  h1
-    span= title
-    small= publishedOn
-
-  markdown body

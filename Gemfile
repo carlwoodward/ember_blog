@@ -21,6 +21,7 @@ group :development, :test do
   gem "pry-debugger"
   gem "pry-remote"
   gem "pry-stack_explorer"
+  gem "qunit-rails"
   gem "rspec-rails"
   gem "steak"
 end

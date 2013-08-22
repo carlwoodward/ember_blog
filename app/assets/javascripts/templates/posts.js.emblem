@@ -1,6 +1,7 @@
 each controller
-  h1
-    span= title
-    small= publishedOn
+  section.post
+    h1
+      span= title
+      small= publishedOn
 
-  markdown body
+    markdown body

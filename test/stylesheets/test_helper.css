@@ -1,0 +1,9 @@
+/*
+ *= require application
+ *= require_tree .
+ *= require_self
+*/
+
+#qunit-fixture {
+  display: block;
+}

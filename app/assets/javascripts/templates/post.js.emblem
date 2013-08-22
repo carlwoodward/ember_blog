@@ -1,6 +1,5 @@
 h1
-  | Super awesome title&nbsp;
-  small 19th August 2013
+  span= title
+  small= publishedOn
 
-each controller
-  markdown body
+markdown body

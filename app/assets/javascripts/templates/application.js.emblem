@@ -8,3 +8,5 @@ header.navbar.navbar-fixed-top
     .col-lg-8.article-body
       outlet
     .col-lg-4
+
+outlet modal

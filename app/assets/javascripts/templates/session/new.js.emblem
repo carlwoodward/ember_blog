@@ -1,0 +1,14 @@
+.modal.fade.session.new
+  .modal-dialog
+    .modal-content
+      form role="form"
+        .modal-header
+          h4.modal-title Login
+        .modal-body
+          .form-group
+            Ember.TextField valueBinding="email" placeholder="Email" class="form-control"
+          .form-group
+            Ember.TextField valueBinding="password" type="password" placeholder="Password" class="form-control"
+        .modal-footer
+          button type="submit" class="btn btn-primary" Log in
+          a class="btn btn-default cancel" Cancel

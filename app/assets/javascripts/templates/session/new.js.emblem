@@ -2,8 +2,9 @@ form role="form" submit="create"
   fieldset
     legend Login
     .form-group
-      Ember.TextField valueBinding="email" placeholder="Email" class="form-control"
+      Ember.TextField valueBinding="model.email" placeholder="Email" class="form-control"
     .form-group
-      Ember.TextField valueBinding="password" type="password" placeholder="Password" class="form-control"
-    button type="submit" class="btn btn-primary" Log in
+      Ember.TextField valueBinding="model.password" type="password" placeholder="Password" class="form-control"
+    button type="submit" disabled={model.invalid} class="btn btn-primary" Log in
+    | &nbsp;
     = linkTo "posts" classNames="btn btn-default cancel" | Cancel

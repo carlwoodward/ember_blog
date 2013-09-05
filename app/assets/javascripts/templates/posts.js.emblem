@@ -1,3 +1,6 @@
+if canAdd
+  a.btn.btn-primary click="addPost" Add Post
+
 each controller
   .post-summary
     h1

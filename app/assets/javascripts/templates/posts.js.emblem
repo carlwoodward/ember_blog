@@ -1,7 +1,7 @@
 each controller
   section.post
     h1
-      span= title
+      span= linkTo "posts" post_id: this | title
       small= publishedOn
 
     markdown body

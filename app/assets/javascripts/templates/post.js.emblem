@@ -1,16 +1,17 @@
 if isEditing
-  form role="form" submit="create"
+  form.post-form role="form" submit="create"
     .form-group
       button.btn.btn-primary click="stopEditing" View Post
     fieldset
       .form-group
-        Ember.TextField valueBinding="model.title" placeholder="Title" class="form-control"
+        Ember.TextField valueBinding="model.title" placeholder="Title" class="form-control title"
       .form-group
-        Ember.TextArea valueBinding="model.body" placeholder="Body" class="form-control"
+        Ember.TextArea valueBinding="model.body" placeholder="Body" class="form-control body"
 else
-  .post-summary
+  .post
     h1
       span= title
-      small= publishedOn
+    small= publishedOn
 
-    markdown body
+    .post-body
+      markdown body

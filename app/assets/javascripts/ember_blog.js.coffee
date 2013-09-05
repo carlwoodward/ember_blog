@@ -14,3 +14,6 @@ EmberBlog.loginStateManager = Ember.StateManager.create
   states:
     loggedOut: Ember.State.create()
     loggedIn: Ember.State.create()
+
+  isLoggedIn: ->
+    @get("currentState.name") is "loggedIn"

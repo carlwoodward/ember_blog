@@ -19,7 +19,7 @@ EmberBlog.Post.FIXTURES = [
   },
   {
     id: "test2",
-    title: "This is a tile",
+    title: "This is a tile2",
     publishedOn: "19th August 2013",
     body: "Test 2"
   }

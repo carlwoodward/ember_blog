@@ -3,11 +3,6 @@ header.navbar.navbar-fixed-top
     .navbar-header
       = linkTo "posts" classNames="navbar-brand" | Blog
 
-    ul.nav.navbar-nav
-      li
-        = linkTo "session.new" | Admin
-
-
 .container
   .row
     .col-lg-8.article-body

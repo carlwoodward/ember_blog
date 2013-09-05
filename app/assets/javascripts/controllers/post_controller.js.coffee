@@ -3,3 +3,6 @@ EmberBlog.PostController = Ember.ObjectController.extend
 
   stopEditing: ->
     @set "isEditing", false
+
+  showLogin: ->
+    @transitionToRoute("session.new")

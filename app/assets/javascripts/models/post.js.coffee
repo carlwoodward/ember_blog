@@ -5,6 +5,11 @@ EmberBlog.Post = DS.Model.extend
   publishedOn: DS.attr("string")
   body: DS.attr("string")
 
+  autoSave: (->
+    Ember.run.debounce @, (=> @get("store").commit()), 1000
+  ).observes("isDirty")
+
+
 EmberBlog.Post.FIXTURES = [
   {
     id: "test1",

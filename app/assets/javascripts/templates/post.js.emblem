@@ -1,6 +1,16 @@
-.post-summary
-  h1
-    span= title
-    small= publishedOn
+if isEditing
+  form role="form" submit="create"
+    .form-group
+      button.btn.btn-primary View
+    fieldset
+      .form-group
+        Ember.TextField valueBinding="model.title" placeholder="Title" class="form-control"
+      .form-group
+        Ember.TextArea valueBinding="model.body" placeholder="Body" class="form-control"
+else
+  .post-summary
+    h1
+      span= title
+      small= publishedOn
 
-  markdown body
+    markdown body

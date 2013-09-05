@@ -1,4 +1,3 @@
 EmberBlog.PostView = Ember.View.extend
-  didInsertElement: ->
-    $('.post-summary').dblclick =>
-      @controller.set 'isEditing', true
+  doubleClick: ->
+    @controller.set "isEditing", true

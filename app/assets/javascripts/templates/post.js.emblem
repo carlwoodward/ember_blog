@@ -1,7 +1,7 @@
 if isEditing
   form role="form" submit="create"
     .form-group
-      button.btn.btn-primary View
+      button.btn.btn-primary click="stopEditing" View Post
     fieldset
       .form-group
         Ember.TextField valueBinding="model.title" placeholder="Title" class="form-control"

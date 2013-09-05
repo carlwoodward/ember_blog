@@ -10,4 +10,4 @@ EmberBlog.PostView = Ember.View.extend
       textarea = @$("textarea")
       if textarea? and textarea.length > 0
         textarea.height(textarea.get(0).scrollHeight)
-  ).observes("controller.model.body, controller.isEditing")
+  ).observes("controller.model.body", "controller.isEditing")

@@ -62,7 +62,6 @@ small {
   font-size: 130%;
 }
 
-
 .post-body, .form-control.body {
   font-family: Georgia;
   font-size: 175%;
@@ -70,6 +69,10 @@ small {
 
 .post-body {
   padding: 1em 0 0 0;
+
+  img {
+    width: 100%;
+  }
 }
 
 .form-control {
@@ -85,5 +88,21 @@ small {
   &:focus {
     box-shadow: none;
     outline: none;
+  }
+}
+
+.login-form {
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .form-control {
+    font-family: Georgia;
+    font-size: 125%;
+    font-style: italic;
+  }
+
+  .form-actions {
+    margin-top: 2em;
   }
 }

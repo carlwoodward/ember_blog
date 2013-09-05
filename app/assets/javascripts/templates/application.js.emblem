@@ -1,4 +1,4 @@
-header.navbar.navbar-fixed-top
+header.navbar
   .container
     .navbar-header
       = linkTo "posts" classNames="navbar-brand" | Blog
@@ -7,6 +7,15 @@ header.navbar.navbar-fixed-top
   .row
     .col-lg-8.article-body
       outlet
-    .col-lg-4
+    .col-lg-4.sidebar
+      .twitter-avatar
+        img src="https://si0.twimg.com/profile_images/1540644165/me.jpg"
+      h4 Carl Woodward
+      a href="http://twitter.com/cjwoodward" @cjwoodward
+      p
+        | Programmer from Sydney, Australia. Running 88cartell, always thinking about products, oo, functional, testing and design.
+
+      p
+        | Getting better at statistics, ember, d3 and clojure.
 
 outlet modal

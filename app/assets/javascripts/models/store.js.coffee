@@ -1,3 +1,5 @@
+DS.RESTAdapter.configure "plurals", post: "posts"
+
 EmberBlog.Store = DS.Store.extend
-  revision: 12
-  adapter: "DS.FixtureAdapter"
+  revision: 14
+  adapter: DS.RESTAdapter.create(url: "http://localhost:3000")

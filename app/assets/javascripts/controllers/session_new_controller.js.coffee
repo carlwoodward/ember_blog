@@ -1,5 +1,9 @@
 EmberBlog.SessionNewController = Ember.Controller.extend
-  create: ->
-    @get("model").save().then =>
-      EmberBlog.loginStateManager.transitionTo("loggedIn")
-      @transitionToRoute "posts"
+  needs: ["application"]
+
+  actions:
+    create: ->
+      applicationController = @controllerFor "application"
+      $.post "/sessions", @get("model").serialize(), (response) =>
+        applicationController.login()
+        @transitionToRoute "posts"

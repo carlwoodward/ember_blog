@@ -2,8 +2,9 @@ EmberBlog.PostsController = Ember.ArrayController.extend
   canAdd: false
 
   updateCanAdd: (->
-    @set "canAdd", EmberBlog.loginStateManager.isLoggedIn()
-  ).observes("EmberBlog.loginStateManager.currentState.name")
+    debugger
+    @set "canAdd", @get("isLoggedIn")
+  ).observes("isLoggedIn")
 
   addPost: ->
     EmberBlog.Post.createRecord()

@@ -1,3 +1,3 @@
 EmberBlog.PostRoute = Ember.Route.extend
   model: (params) ->
-    EmberBlog.Post.find(params["post_slug"])
+    @get("store").find("post", 1)

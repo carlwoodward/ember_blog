@@ -7,13 +7,3 @@
 #= require_tree ./routes
 #= require ./router
 #= require_self
-
-EmberBlog.loginStateManager = Ember.StateManager.create
-  initialState: "loggedOut"
-
-  states:
-    loggedOut: Ember.State.create()
-    loggedIn: Ember.State.create()
-
-  isLoggedIn: ->
-    @get("currentState.name") is "loggedIn"

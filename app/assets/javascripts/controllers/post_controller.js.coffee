@@ -1,5 +1,7 @@
 EmberBlog.PostController = Ember.ObjectController.extend
+  needs: "application"
   isEditing: false
+  isLoggedIn: Ember.computed.alias("controllers.application.isLoggedIn")
 
   stopEditing: ->
     @get("store").commit()

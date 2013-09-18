@@ -1,18 +1,30 @@
 class PostsController < ApplicationController
   respond_to :json
 
+  before_filter :logged_in, :only => [:create, :update]
+
   def index
-    posts = { :posts => [{ :id => 1, :title => "Test", :body => "This is a test", :published_on => "19 March 2013" }] }
-    respond_with posts
+    respond_with :posts => Post.all.map(&:attributes)
   end
 
   def show
-    post = { :post => { :id => 1, :title => "Test", :body => "This is a test", :published_on => "19 March 2013" } }
+    respond_with Post.find(params[:id])
+  end
+
+  def create
+    post = Post.create! post_params
     respond_with post
   end
 
   def update
-    post = { :post => { :id => 1, :title => "Test", :body => "This is a test", :published_on => "19 March 2013" } }
+    post = Post.find(params[:id])
+    post.update_attributes post_params
     respond_with post
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :body)
   end
 end

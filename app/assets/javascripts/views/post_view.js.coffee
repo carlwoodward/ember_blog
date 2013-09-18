@@ -1,7 +1,6 @@
 EmberBlog.PostView = Ember.View.extend
   doubleClick: ->
-    debugger
-    if @controller.controllerFor("application").get("isLoggedIn")
+    if @controller.get("isLoggedIn")
       @controller.set "isEditing", true
     else
       @controller.showLogin()

@@ -1,12 +1,4 @@
 GIT
-  remote: https://github.com/alexspeller/emblem-rails.git
-  revision: 6fc29af88c6c0541bcf9ba4f879849501ffda02c
-  specs:
-    emblem-rails (0.1.1)
-      barber-emblem (~> 0.1.1)
-      ember-rails (>= 0.11.1)
-
-GIT
   remote: https://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: fef0290099e93bd8aa127e1ff5863732060c372d
   branch: bootstrap3
@@ -95,6 +87,9 @@ GEM
       railties (>= 3.1)
     ember-source (1.0.0)
       handlebars-source (= 1.0.12)
+    emblem-rails (0.1.1)
+      barber-emblem (~> 0.1.1)
+      ember-rails (>= 0.11.1)
     emblem-source (0.3.2)
     erubis (2.7.0)
     execjs (2.0.1)
@@ -127,7 +122,7 @@ GEM
     multi_json (1.8.0)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
-    pg (0.16.0)
+    pg (0.17.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -213,7 +208,9 @@ DEPENDENCIES
   active_model_serializers
   coffee-rails
   dotenv
-  emblem-rails!
+  ember-rails
+  ember-source (= 1.0.0)
+  emblem-rails
   haml-rails
   jquery-rails
   less-rails

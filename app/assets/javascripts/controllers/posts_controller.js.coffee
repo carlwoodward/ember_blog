@@ -1,11 +1,8 @@
 EmberBlog.PostsController = Ember.ArrayController.extend
-  canAdd: false
+  needs: ["application"]
+  canAdd: Ember.computed.alias("controllers.application.isLoggedIn")
 
-  updateCanAdd: (->
-    debugger
-    @set "canAdd", @get("isLoggedIn")
-  ).observes("isLoggedIn")
-
-  addPost: ->
-    EmberBlog.Post.createRecord()
-    @get("store").commit()
+  actions:
+    addPost: ->
+      EmberBlog.Post.createRecord(title: "Default title", body: "Default body")
+      @get("store").commit()

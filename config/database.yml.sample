@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ember_blog_development
+  pool: 5
+  username: USER
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: ember_blog_test
+  pool: 5
+  username: USER
+  password:
+  host: localhost

@@ -1,11 +1,11 @@
 class SessionsController < ApplicationController
   def create
-    session = Session.new :email => params[:email], :password => params[:password]
-    if session.valid?
-      session[:user_id] = session
-      render :json => { :session => session }
+    user_session = Session.new :email => params[:email], :password => params[:password]
+    if user_session.valid?
+      session[:user_id] = user_session
+      render :json => { :session => user_session }
     else
-      render :json => { :session => session }, :status => :forbidden
+      render :json => { :session => user_session }, :status => :forbidden
     end
   end
 end
